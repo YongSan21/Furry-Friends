@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Furry Friends | Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="slide.js"></script>
+    <script src="nav.js"></script>
+    <script src="java.js"></script>
+    <link rel="icon" href="icon.png">
+    <link rel="logo" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="site-header">
+    </div>
+
+    <div class="site-header sticky">
+        <div style="float: left; display: inline;">
+            <a href="index.html">
+                <img class="logo" src="logo_rmvbg.png" alt="logo">
+            </a>
+        </div>
+        <div>
+            <nav class="navbar" id="navbar">
+                <a class="menu" href="index.html">Home</a>
+                <a class="menu" href="about.html">About Us</a>
+                <a class="menu" href="adopt.html">Adopt</a>
+                <a class="menu" href="volunteer.html">Volunteer</a>
+                <a class="menu" href="donate.html">Donate</a>
+                <a class="menu" href="contact.html">Contact Us</a>
+                <a class="menu" href="#" id="loginBtn"><i style="font-size: 24px;" class="fa">&#xf090;</i></a>
+                <span class="menu" id="usernameDisplay"></span>
+                <div id="usernameDropdown" class="dropdown-content">
+                    <a href="#" id="logoutBtn">Logout</a>
+                </div>
+             </nav>
+        </div>
+
+        <!-- Dropdown menu -->
+        <div class="dropdown-menu">
+            <a style="font-size: large;" href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+            <div class="dropdown-list" id="Dropdown">
+                <a class="dropdownMenu" href="index.html">Home</a>
+                <a class="dropdownMenu" href="about.html">About Us</a>
+                <a class="dropdownMenu" href="adopt.html">Adopt</a>
+                <a class="dropdownMenu" href="volunteer.html">Volunteer</a>
+                <a class="dropdownMenu" href="donate.html">Donate</a>
+                <a class="dropdownMenu" href="contact.html">Contact Us</a>
+                <a style="padding: 15px; padding-right: 10%;" href="#" id="dropdownLoginBtn"><i style="font-size: 24px;" class="fa">&#xf090;</i></a>
+                <span style="padding: 15px;" id="dropdownUsernameDisplay"></span>
+                <div id="dropdownUsernameDropdown" class="Ddropdown-content">
+                    <a href="#" id="dropdownLogoutBtn">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+<div id="loginForm" class="login">
+    <form id="loginFormContent" class="login-content">
+        <div class="closeContainer">
+            <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close">&times;</span>
+        </div>
+        <div class="formContainer">
+            <label for="title" style="font-size: 28px; color: black;"><b>Log In</b></label>
+            <br><br>
+            <label for="uname" style="font-size: 20px; color: black;"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <br>
+            <label for="psw" style="font-size: 20px; color: black;"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <br><br>
+            <button type="submit" class="formBtn">Login</button>
+            <button type="button" onclick="document.getElementById('loginForm').style.display='none'" class="formBtn">Cancel</button>
+            <br>
+            <button type="button" onclick="document.getElementById('signupForm').style.display='block';document.getElementById('loginForm').style.display='none'" class="formBtn">Sign Up</button>
+        </div>
+    </form>
+</div>
+
+<!-- Sign-Up Form -->
+<div id="signupForm" class="login" style="display:none;">
+    <form id="signupFormContent" class="login-content">
+        <div class="closeContainer">
+            <span onclick="document.getElementById('signupForm').style.display='none'" class="close" title="Close">&times;</span>
+        </div>
+        <div class="formContainer">
+            <label for="title" style="font-size: 28px; color: black;"><b>Sign Up</b></label>
+            <br><br>
+            <label for="uname" style="font-size: 20px; color: black;"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <br>
+            <label for="psw" style="font-size: 20px; color: black;"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <br><br>
+            <button type="submit" class="formBtn">Sign Up</button>
+            <button type="button" onclick="document.getElementById('signupForm').style.display='none'" class="formBtn">Cancel</button>
+        </div>
+    </form>
+</div>
+
+    <div class="container">
+        <div class="slider">
+            <div class="slide fade">
+                <img style="opacity: 0.8;" src="slide1.jpg" alt="Image 1">
+                <div class="caption_">We Believe in Better World For Cats & Dogs</div>
+                <div class="text_"><b style="font-size: 22px; color: #fcd1cc; font-family: inherit;">Furry Friends</b> , a lifesaving nonprofit, inspires and empowers animal lovers to save pet lives.</div>
+                <a style="top: 400px;" class="btn" href="about.html">About Us</a>
+            </div>
+            <div class="slide fade">
+                <img style="opacity: 0.8c;" src="slide2.jpg" alt="Image 2">
+                <div class="caption">Adopt. Don't Shop.</div>
+                <div class="text">Looking to adopt a pet? We have many dogs and cats that are in need of a loving home. Come visit us! We are open from 9am to 4pm six days a week (closed on Wednesdays & select Public Holidays).</div>
+                <a style="top: 400px; right: 10px;" class="btn" href="adopt.html">Adopt a pet</a>
+                <a style="top: 400px;" class="btn" href="donate.html">Donate</a>
+            </div>
+            <div class="slide fade">
+                <img style="opacity: 0.8;" src="slide3.jpg" alt="Image 3">
+                <div style="font-size: 50px; top: 25%;" class="caption">Be a Hero for Furry Friends: Volunteer and Change Lives!</div>
+                <a style="top: 400px;" class="btn" href="volunteer.html">Volunteer Now!</a>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="navigation-button">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        
+        <br><br>
+        <div style="padding: 120px; padding-top: 20%; padding-left: 20%; padding-right: 20%; text-align: center;">
+            <h1>What is Furry Friends?</h1>
+            <p style="text-align: center;"><b>Furry Friends</b> is a non-profit animal shelter in Subang Jaya that has been in operation since 2024. We receive the surrender of unwanted dogs and cats which we will vaccinate, deworm, neuter/spay, and put up for adoption. Currently, there are over 30 dogs and 25 cats under the care of the shelter. 
+            The shelter and all costs involved in running it are entirely funded by the generous donations of the public as well as proceeds from charitable events. The Furry Friends team consists of four office staff, a number of part-time veterinarians, one vet assistant, seven kennel workers, and one driver. Furry Friends is a registered Society under the Registry of Societies of Malaysia that is led by an elected committee.</p>
+            <a class="btn_" href="about.html">More Info</a>
+        </div>
+        <div style="padding: 120px; padding-left: 20%; padding-right: 20%; text-align: center;">
+            <h1>Services</h1>
+            <p style="text-align: center;"><b>Furry Friends</b> accepts unwanted pets and stray animals - puppies, adult dogs, kittens and adult cats. We also have hundreds of animals waiting for a forever home - dewormed, fully vaccinated and neutered/spayed.</p>
+            <a class="btn_" href="about.html">More Info</a>
+        </div>
+
+        <button onclick="topFunction()" id="backBtn" title="Go to top">↑</button>
+    </div>
+    
+    <footer>
+        <div class="contact-details">
+            <h3>Contact details</h3>
+            <p><a href="tel:+60174770060"><i class="fa fa-phone fa-lg"></i> 017-4770060</a></p>
+            <p><a href="mailto:yw.lim11140@gmail.com"><i class="fa fa-envelope-o"></i> yw.lim11140@gmail.com</a></p>
+            <p><i class="fa fa-map-marker fa-lg"></i> 5, Jalan Universiti, Bandar Sunway, 47500<br> Petaling Jaya, Selangor</p>
+        </div>
+        <div class="opening-hours">
+            <h3>Opening hours</h3>
+            <p>Mon - Sun 9:00am - 4:00pm</p>
+            <p>(Closed on Wednesdays & select Public Holidays)</p>
+        </div>
+        <div class="copyright">
+            Copyright © 2024 Furry Friends. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Furry Friends | Contact Us</title>
+    <link rel="stylesheet" href="style_contact.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="nav.js"></script>
+    <script src="java.js"></script>
+    <script src="contact.js"></script>
+    <link rel="icon" href="icon.png">
+    <link rel="logo" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="site-header">
+    </div>
+
+    <div class="site-header sticky">
+        <div style="float: left; display: inline;">
+            <a href="index.html">
+                <img class="logo" src="logo_rmvbg.png" alt="logo">
+            </a>
+        </div>
+        <div>
+            <nav class="navbar" id="navbar">
+                <a class="menu" href="index.html">Home</a>
+                <a class="menu" href="about.html">About Us</a>
+                <a class="menu" href="adopt.html">Adopt</a>
+                <a class="menu" href="volunteer.html">Volunteer</a>
+                <a class="menu" href="donate.html">Donate</a>
+                <a class="menu" href="contact.html">Contact Us</a>
+                <a class="menu" href="#" id="loginBtn"><i style="font-size: 24px;" class="fa">&#xf090;</i></a>
+                <span class="menu" id="usernameDisplay"></span>
+                <div id="usernameDropdown" class="dropdown-content">
+                    <a href="#" id="logoutBtn">Logout</a>
+                </div>
+             </nav>
+        </div>
+
+        <!-- Dropdown menu -->
+        <div class="dropdown-menu">
+            <a style="font-size: large;" href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+            <div class="dropdown-list" id="Dropdown">
+                <a class="dropdownMenu" href="index.html">Home</a>
+                <a class="dropdownMenu" href="about.html">About Us</a>
+                <a class="dropdownMenu" href="adopt.html">Adopt</a>
+                <a class="dropdownMenu" href="volunteer.html">Volunteer</a>
+                <a class="dropdownMenu" href="donate.html">Donate</a>
+                <a class="dropdownMenu" href="contact.html">Contact Us</a>
+                <a style="padding: 15px; padding-right: 10%;" href="#" id="dropdownLoginBtn"><i style="font-size: 24px;" class="fa">&#xf090;</i></a>
+                <span style="padding: 15px;" id="dropdownUsernameDisplay"></span>
+                <div id="dropdownUsernameDropdown" class="Ddropdown-content">
+                    <a href="#" id="dropdownLogoutBtn">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+<div id="loginForm" class="login">
+    <form id="loginFormContent" class="login-content">
+        <div class="closeContainer">
+            <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close">&times;</span>
+        </div>
+        <div class="formContainer">
+            <label for="title" style="font-size: 28px; color: black;"><b>Log In</b></label>
+            <br><br>
+            <label for="uname" style="font-size: 20px; color: black;"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <br>
+            <label for="psw" style="font-size: 20px; color: black;"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <br><br>
+            <button type="submit" class="formBtn">Login</button>
+            <button type="button" onclick="document.getElementById('loginForm').style.display='none'" class="formBtn">Cancel</button>
+            <br>
+            <button type="button" onclick="document.getElementById('signupForm').style.display='block';document.getElementById('loginForm').style.display='none'" class="formBtn">Sign Up</button>
+        </div>
+    </form>
+</div>
+
+<!-- Sign-Up Form -->
+<div id="signupForm" class="login" style="display:none;">
+    <form id="signupFormContent" class="login-content">
+        <div class="closeContainer">
+            <span onclick="document.getElementById('signupForm').style.display='none'" class="close" title="Close">&times;</span>
+        </div>
+        <div class="formContainer">
+            <label for="title" style="font-size: 28px; color: black;"><b>Sign Up</b></label>
+            <br><br>
+            <label for="uname" style="font-size: 20px; color: black;"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <br>
+            <label for="psw" style="font-size: 20px; color: black;"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <br><br>
+            <button type="submit" class="formBtn">Sign Up</button>
+            <button type="button" onclick="document.getElementById('signupForm').style.display='none'" class="formBtn">Cancel</button>
+        </div>
+    </form>
+</div>
+
+    <div class="container" style="padding-bottom: 200px;">
+        <div>
+            <img style="opacity: 0.5; width: 100%;" src="banner.jpg" alt="title">
+            <div class="banner">Contact Us</div>
+        </div>
+
+        <form class="contactForm" id="contactForm">
+            <fieldset>
+                <legend><b>Your Contact</b></legend>
+                <label class="label" for="name">Name: </label>
+                <input type="text" id="name" name="user_name" placeholder="Lim Jia Pei" tabindex="1" accesskey="N" class="info" style="width: 75%;" required><br>
+
+                <label class="label" for="phone">Phone: </label>
+                <input type="tel" id="tel" name="user_tel" placeholder="012-3456789" tabindex="2" accesskey="P" class="info" required><br>
+
+                <label class="label" for="email">Email: </label>
+                <input type="email" id="email" name="user_email" placeholder="jiapei@gmail.com" tabindex="3" accesskey="E" class="info" required>
+
+                <h3 class="method" style="color: black;">Preferred contact method:</h3>
+                <label class="label">Phone</label>
+                <div class="radio"><input type="radio" name="preferred_contact" id="phone" value="phone" checked></div>
+                <label class="label">Email</label>
+                <div class="radio"><input type="radio" name="preferred_contact" id="email" value="email"></div>
+
+                <button class="contactBtn" type="submit">Submit</button>
+            </fieldset>
+        </form>
+        <div class="success-message" id="successMessage">
+            Your form has been successfully submitted!
+        </div>
+
+        <div id="contactUs">
+            <h2>Our Contact</h2>
+            <p><a href="tel:+60174770060"><i class="fa fa-phone fa-lg" style="padding: 3px;"></i> 017-4770060</a></p>
+            <p><a href="mailto:yw.lim11140@gmail.com"><i class="fa fa-envelope-o" style="padding: 3px; padding-right: 8px;"></i>yw.lim11140@gmail.com</a></p>
+            <p><i class="fa fa-map-marker fa-lg" style="padding: 3px;"></i> 5, Jalan Universiti, Bandar Sunway, 47500<br> Petaling Jaya, Selangor</p>
+            <h2>Location</h2>
+            <p style="font-size: 18px;">Google map: <a href="https://maps.app.goo.gl/fseMMjXFYBWyQQNp6"><b>Find us here!</b></a></p>
+            <p style="font-size: 18px;">Waze: <a href="https://ul.waze.com/ul?ll=3.06707782%2C101.60392284&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"><b>Find us here!</b></a></p>
+        </div>
+
+        <button onclick="topFunction()" id="backBtn" title="Go to top">↑</button>
+        
+    </div>
+
+    <footer>
+        <div class="contact-details">
+            <h3>Contact details</h3>
+            <p><a href="tel:+60174770060"><i class="fa fa-phone fa-lg"></i> 017-4770060</a></p>
+            <p><a href="mailto:yw.lim11140@gmail.com"><i class="fa fa-envelope-o"></i> yw.lim11140@gmail.com</a></p>
+            <p><i class="fa fa-map-marker fa-lg"></i> 5, Jalan Universiti, Bandar Sunway, 47500<br> Petaling Jaya, Selangor</p>
+        </div>
+        <div class="opening-hours">
+            <h3>Opening hours</h3>
+            <p>Mon - Sun 9:00am - 4:00pm</p>
+            <p>(Closed on Wednesdays & select Public Holidays)</p>
+        </div>
+        <div class="copyright">
+            Copyright © 2024 Furry Friends. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>

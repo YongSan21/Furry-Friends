@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furry Friends | Adopt</title>
+    <link rel="stylesheet" href="adopt.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="nav.js"></script>
+    <script src="java.js"></script>
+    <link rel="icon" href="icon.png">
+    <link rel="logo" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="site-header">
+    </div>
+
+    <div class="site-header sticky">
+        <div style="float: left; display: inline;">
+            <a href="index.html">
+                <img class="logo" src="logo_rmvbg.png" alt="logo">
+            </a>
+        </div>
+        <div>
+            <nav class="navbar" id="navbar">
+                <a class="menu" href="index.html">Home</a>
+                <a class="menu" href="about.html">About Us</a>
+                <a class="menu" href="adopt.html">Adopt</a>
+                <a class="menu" href="volunteer.html">Volunteer</a>
+                <a class="menu" href="donate.html">Donate</a>
+                <a class="menu" href="contact.html">Contact Us</a>
+                <a class="menu" href="#" id="loginBtn"><i style="font-size: 24px;" class="fa">&#xf090;</i></a>
+                <span class="menu" id="usernameDisplay"></span>
+                <div id="usernameDropdown" class="dropdown-content">
+                    <a href="#" id="logoutBtn">Logout</a>
+                </div>
+             </nav>
+        </div>
+
+        <!-- Dropdown menu -->
+        <div class="dropdown-menu">
+            <a style="font-size: large;" href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+            <div class="dropdown-list" id="Dropdown">
+                <a class="dropdownMenu" href="index.html">Home</a>
+                <a class="dropdownMenu" href="about.html">About Us</a>
+                <a class="dropdownMenu" href="adopt.html">Adopt</a>
+                <a class="dropdownMenu" href="volunteer.html">Volunteer</a>
+                <a class="dropdownMenu" href="donate.html">Donate</a>
+                <a class="dropdownMenu" href="contact.html">Contact Us</a>
+                <a style="padding: 15px; padding-right: 10%;" href="#" id="dropdownLoginBtn"><i style="font-size: 24px;" class="fa">&#xf090;</i></a>
+                <span style="padding: 15px;" id="dropdownUsernameDisplay"></span>
+                <div id="dropdownUsernameDropdown" class="Ddropdown-content">
+                    <a href="#" id="dropdownLogoutBtn">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+<div id="loginForm" class="login">
+    <form id="loginFormContent" class="login-content">
+        <div class="closeContainer">
+            <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close">&times;</span>
+        </div>
+        <div class="formContainer">
+            <label for="title" style="font-size: 28px; color: black;"><b>Log In</b></label>
+            <br><br>
+            <label for="uname" style="font-size: 20px; color: black;"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <br>
+            <label for="psw" style="font-size: 20px; color: black;"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <br><br>
+            <button type="submit" class="formBtn">Login</button>
+            <button type="button" onclick="document.getElementById('loginForm').style.display='none'" class="formBtn">Cancel</button>
+            <br>
+            <button type="button" onclick="document.getElementById('signupForm').style.display='block';document.getElementById('loginForm').style.display='none'" class="formBtn">Sign Up</button>
+        </div>
+    </form>
+</div>
+
+<!-- Sign-Up Form -->
+<div id="signupForm" class="login" style="display:none;">
+    <form id="signupFormContent" class="login-content">
+        <div class="closeContainer">
+            <span onclick="document.getElementById('signupForm').style.display='none'" class="close" title="Close">&times;</span>
+        </div>
+        <div class="formContainer">
+            <label for="title" style="font-size: 28px; color: black;"><b>Sign Up</b></label>
+            <br><br>
+            <label for="uname" style="font-size: 20px; color: black;"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <br>
+            <label for="psw" style="font-size: 20px; color: black;"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <br><br>
+            <button type="submit" class="formBtn">Sign Up</button>
+            <button type="button" onclick="document.getElementById('signupForm').style.display='none'" class="formBtn">Cancel</button>
+        </div>
+    </form>
+</div>
+    <div class="container">
+        <div>
+            <img style="opacity: 0.5; width: 100%;" src="banner.jpg" alt="title">
+            <div class="banner">Adopt</div>
+        </div>
+        <section class="adopt-info">
+            <h1>Adopt a Friend</h1>
+            <p>Looking to adopt a pet? Here you can find your new furry friend and give them a loving home!</p>
+            <button onclick="location.href='adoptForm.html'">Apply for Adoption</button>
+        </section>
+        <section class="adopt-listings">
+            <h2>Adopt New Pets</h2>
+            <p>Adopt a Furry Friend from shelters & rescuers. Let's help them to find their forever home.</p>
+            <div class="pets-grid">
+                <div class="pet-card">
+                    <img src="images/image2.jpg" alt="Daisy">
+                    <h2 style="color:black;">Daisy</h2>
+                    <p><strong>Pet Details:</strong> Cat, Female, Young Age</p>
+                    <p><strong>Location:</strong> Butterworth, Penang</p>
+                    <p class="status">Need New Family</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/image3.jpeg" alt="Simba">
+                    <h2 style="color:black;">Simba</h2>
+                    <p><strong>Pet Details:</strong> Dog, Male, Young Age</p>
+                    <p><strong>Location:</strong> George Town, Penang</p>
+                    <p class="status">Need New Family</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/image4.jpg" alt="Tiger">
+                    <h2 style="color:black;">Tiger</h2>
+                    <p><strong>Pet Details:</strong> Cat, Male, Young Age</p>
+                    <p><strong>Location:</strong> Batu Kawan, Penang</p>
+                    <p class ="status">Need New Family</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/image5.jpg" alt="Rocky">
+                    <h2 style="color:black;">Rocky</h2>
+                    <p><strong>Pet Details:</strong> Dog, Male, Young Age</p>
+                    <p><strong>Location:</strong> Sungai Petani, Kedah</p>
+                    <p class ="status">Need New Family</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/image6.png" alt="Ariel">
+                    <h2 style="color:black;">Ariel</h2>
+                    <p><strong>Pet Details:</strong> Cat, Female, Young Age</p>
+                    <p><strong>Location:</strong> Bandar Sunway</p>
+                    <p class ="status">Need New Family</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/image7.jpg" alt="Shadow">
+                    <h2 style="color:black;">Shadow</h2>
+                    <p><strong>Pet Details:</strong> Cat, Male, Adult Age</p>
+                    <p><strong>Location:</strong> Gelugor, Penang</p>
+                    <p class ="status">Need New Family</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/image8.webp" alt="Buddy">
+                    <h2 style="color:black;">Buddy</h2>
+                    <p><strong>Pet Details:</strong> Dog, Female, Adult Age</p>
+                    <p><strong>Location:</strong> Cyberjaya</p>
+                    <p class ="status">Need New Family</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/image9.webp" alt="Peanut">
+                    <h2 style="color:black;">Peanut</h2>
+                    <p><strong>Pet Details:</strong> Cat, Female, Adult Age</p>
+                    <p><strong>Location:</strong> Simpang Ampat, Penang</p>
+                    <p class ="status">Need New Family</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/image10.jpg" alt="Oreo">
+                    <h2 style="color:black;">Oreo</h2>
+                    <p><strong>Pet Details:</strong> Dog, Male, Young Age</p>
+                    <p><strong>Location:</strong> Putrajaya</p>
+                    <p class ="status">Need New Family</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/image11.jpeg" alt="Stormy">
+                    <h2 style="color:black;">Stormy</h2>
+                    <p><strong>Pet Details:</strong> Cat, Male, Adult Age</p>
+                    <p><strong>Location:</strong> Ipoh, Perak</p>
+                    <p class ="status">Need New Family</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/image12.jpg" alt="Ralph">
+                    <h2 style="color:black;">Ralph</h2>
+                    <p><strong>Pet Details:</strong> Dog, Male, Young Age</p>
+                    <p><strong>Location:</strong> Bukit Mertajam, Penang</p>
+                    <p class ="status">Need New Family</p>
+                </div>
+                <div class="pet-card">
+                    <img src="images/image13.jpg" alt="Loki">
+                    <h2 style="color:black;">Loki</h2>
+                    <p><strong>Pet Details:</strong> Dog, Female, Young Age</p>
+                    <p><strong>Location:</strong> Kuala Lumpur</p>
+                    <p class ="status">Need New Family</p>
+                </div>
+            </div>
+        </section>
+
+        <button onclick="topFunction()" id="backBtn" title="Go to top">↑</button>
+    </div>
+    <footer>
+        <div class="contact-details">
+            <h3>Contact details</h3>
+            <p><a href="tel:+60174770060"><i class="fa fa-phone fa-lg"></i> 017-4770060</a></p>
+            <p><a href="mailto:yw.lim11140@gmail.com"><i class="fa fa-envelope-o"></i> yw.lim11140@gmail.com</a></p>
+            <p><i class="fa fa-map-marker fa-lg"></i> 5, Jalan Universiti, Bandar Sunway, 47500<br> Petaling Jaya, Selangor</p>
+        </div>
+        <div class="opening-hours">
+            <h3>Opening hours</h3>
+            <p>Mon - Sun 9:00am - 4:00pm</p>
+            <p>(Closed on Wednesdays & select Public Holidays)</p>
+        </div>
+        <div class="copyright">
+            Copyright © 2024 Furry Friends. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>

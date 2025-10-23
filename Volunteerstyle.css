@@ -1,0 +1,14 @@
+h2{
+    color:#474646;
+    font-size:2.5em;
+    padding: 10px;
+    padding-left: 15px;
+ }
+
+.box{
+    background-color:#fbc2bb;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
